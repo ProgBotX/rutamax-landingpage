@@ -1,5 +1,6 @@
 import React from "react";
 import HeroSection from "../components/HeroSection";
+import Downloads from "./Downloads";
 
 const LandingPage: React.FC = () => {
   return (
@@ -25,6 +26,8 @@ const LandingPage: React.FC = () => {
           </div>
         </div>
       </section>
+
+      <Downloads />
 
       {/* Llamada a la acción */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-500 py-16">

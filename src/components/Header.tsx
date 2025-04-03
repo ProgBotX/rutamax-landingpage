@@ -16,10 +16,10 @@ const Header = () => {
             {/* Desktop menu */}
             <div className="hidden md:flex items-center space-x-8">
               <Link to="/" className="text-white hover:text-blue-200 px-3 py-2 font-medium">Inicio</Link>
-              <a href="#" className="text-white hover:text-blue-200 px-3 py-2 font-medium">Características</a>
+              {/* <a href="#" className="text-white hover:text-blue-200 px-3 py-2 font-medium">Características</a> */}
               <Link to="downloads" className="text-white hover:text-blue-200 px-3 py-2 font-medium">Descargas</Link>
-              <a href="#" className="text-white hover:text-blue-200 px-3 py-2 font-medium">Contacto</a>
-              <a href="#" className="bg-white text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg font-medium transition duration-150">Descargar App</a>
+              {/* <a href="#" className="text-white hover:text-blue-200 px-3 py-2 font-medium">Contacto</a> */}
+              {/* <a href="#" className="bg-white text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg font-medium transition duration-150">Descargar App</a> */}
             </div>
             
             {/* Mobile menu button */}
@@ -40,10 +40,10 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden bg-blue-600 pb-3 px-2">
             <Link to="/" className="block text-white hover:bg-blue-700 px-3 py-2 rounded-md text-base font-medium">Inicio</Link>
-            <a href="#" className="block text-white hover:bg-blue-700 px-3 py-2 rounded-md text-base font-medium">Características</a>
+            {/* <a href="#" className="block text-white hover:bg-blue-700 px-3 py-2 rounded-md text-base font-medium">Características</a> */}
             <Link to="downloads" className="block text-white hover:bg-blue-700 px-3 py-2 rounded-md text-base font-medium">Descargas</Link>
-            <a href="#" className="block text-white hover:bg-blue-700 px-3 py-2 rounded-md text-base font-medium">Contacto</a>
-            <a href="#" className="block bg-white text-blue-600 hover:bg-blue-50 mt-2 px-3 py-2 rounded-md text-base font-medium">Descargar App</a>
+            {/* <a href="#" className="block text-white hover:bg-blue-700 px-3 py-2 rounded-md text-base font-medium">Contacto</a> */}
+            {/* <a href="#" className="block bg-white text-blue-600 hover:bg-blue-50 mt-2 px-3 py-2 rounded-md text-base font-medium">Descargar App</a> */}
           </div>
         )}
       </nav>

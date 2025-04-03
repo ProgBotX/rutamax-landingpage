@@ -8,7 +8,7 @@ import Layout from "./components/Layout";
 
 function App() {
   return (
-    <Router basename="/rutamax-landingpage">
+    <Router>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<LandingPage />} />
