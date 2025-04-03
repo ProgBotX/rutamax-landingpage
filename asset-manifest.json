@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/rutamax-landingpage/static/css/main.bc23165c.css",
-    "main.js": "/rutamax-landingpage/static/js/main.addbf539.js",
+    "main.css": "/rutamax-landingpage/static/css/main.d299e338.css",
+    "main.js": "/rutamax-landingpage/static/js/main.094bd84a.js",
     "static/js/453.b94e3d3e.chunk.js": "/rutamax-landingpage/static/js/453.b94e3d3e.chunk.js",
+    "static/media/rutamax_preview.jpg": "/rutamax-landingpage/static/media/rutamax_preview.79596de1283e46c4951f.jpg",
     "index.html": "/rutamax-landingpage/index.html",
-    "main.bc23165c.css.map": "/rutamax-landingpage/static/css/main.bc23165c.css.map",
-    "main.addbf539.js.map": "/rutamax-landingpage/static/js/main.addbf539.js.map",
+    "main.d299e338.css.map": "/rutamax-landingpage/static/css/main.d299e338.css.map",
+    "main.094bd84a.js.map": "/rutamax-landingpage/static/js/main.094bd84a.js.map",
     "453.b94e3d3e.chunk.js.map": "/rutamax-landingpage/static/js/453.b94e3d3e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bc23165c.css",
-    "static/js/main.addbf539.js"
+    "static/css/main.d299e338.css",
+    "static/js/main.094bd84a.js"
   ]
 }
