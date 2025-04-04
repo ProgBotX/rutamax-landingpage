@@ -6,11 +6,12 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-      <nav className="bg-gradient-to-r from-blue-600 to-blue-500 shadow-lg">
+      <nav className="bg-gradient-to-r from-sky-900 to-sky-800 shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
-              <span className="text-white font-bold text-xl">RutaMax</span>
+              {/* <span className="text-white font-bold text-xl">RutaMax</span> */}
+              <Link to="/" className="text-white font-bold text-xl">RutaMax</Link>
             </div>
             
             {/* Desktop menu */}
@@ -38,7 +39,7 @@ const Header = () => {
         
         {/* Mobile menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-blue-600 pb-3 px-2">
+          <div className="md:hidden bg-blue-900 pb-3 px-2">
             <Link to="/" className="block text-white hover:bg-blue-700 px-3 py-2 rounded-md text-base font-medium">Inicio</Link>
             {/* <a href="#" className="block text-white hover:bg-blue-700 px-3 py-2 rounded-md text-base font-medium">Características</a> */}
             <Link to="downloads" className="block text-white hover:bg-blue-700 px-3 py-2 rounded-md text-base font-medium">Descargas</Link>
