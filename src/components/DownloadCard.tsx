@@ -1,5 +1,6 @@
 import React from 'react';
 import { DownloadCardProps } from '../data/interfaces/VerionData';
+import { FaDownload } from "react-icons/fa";
 
 const DownloadCard: React.FC<DownloadCardProps> = ({ data }) => {
   // Definimos clases dinámicas para el badge en base al color de estado.
@@ -35,10 +36,8 @@ const DownloadCard: React.FC<DownloadCardProps> = ({ data }) => {
           <a
             href={data.download.url}
             className={downloadButtonClasses}
-            target="_blank"
-            rel="noopener noreferrer"
           >
-            Descargar para {data.download.platform}
+            <FaDownload className="mr-2" /> Descargar para {data.download.platform}
           </a>
         </div>
       </div>

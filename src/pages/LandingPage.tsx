@@ -3,7 +3,7 @@ import HeroSection from "../components/HeroSection";
 import Downloads from "./Downloads";
 import versionsData from "./versions";
 import DownloadCard from "../components/DownloadCard";
-import { FaDownload } from 'react-icons/fa';
+import { FaDownload, FaUsers, FaRegSmile, FaSyncAlt } from 'react-icons/fa';
 
 const LandingPage: React.FC = () => {
   return (
@@ -16,14 +16,23 @@ const LandingPage: React.FC = () => {
         <h2 className="text-3xl font-bold text-center mb-8">¿Por qué usar RutaMax?</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="p-6 bg-gray-100 rounded-lg text-center">
+            <div className="flex justify-center mb-4">
+              <FaUsers className="text-blue-500 text-4xl" /> {/* Ícono */}
+            </div>
             <h3 className="text-xl font-semibold">Colaborativo</h3>
             <p className="mt-2">Los usuarios pueden compartir rutas.</p>
           </div>
           <div className="p-6 bg-gray-100 rounded-lg text-center">
+            <div className="flex justify-center mb-4">
+              <FaRegSmile className="text-green-500 text-4xl" /> {/* Ícono */}
+            </div>
             <h3 className="text-xl font-semibold">Fácil de usar</h3>
             <p className="mt-2">Interfaz amigable para todos los usuarios.</p>
           </div>
           <div className="p-6 bg-gray-100 rounded-lg text-center">
+            <div className="flex justify-center mb-4">
+              <FaSyncAlt className="text-yellow-500 text-4xl" /> {/* Ícono */}
+            </div>
             <h3 className="text-xl font-semibold">Actualizado</h3>
             <p className="mt-2">Información de rutas siempre al día.</p>
           </div>
@@ -33,7 +42,7 @@ const LandingPage: React.FC = () => {
       <div id="downloads" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-bold text-gray-900">
               Versiones Disponibles
             </h2>
             <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">

@@ -4,7 +4,7 @@ import { VersionData } from "../data/interfaces/VerionData";
 const versionsData: VersionData[] = [
     {
       id: 1,
-      version: "RutaMax v0.1.0",
+      version: "RutaMax v0.1.0-alpha",
       lastUpdate: "21 diciembre, 2024",
       status: "Versión anterior",
       statusColor: "blue",
@@ -15,13 +15,13 @@ const versionsData: VersionData[] = [
       ],
       download: {
         platform: "Android",
-        url: "https://github.com/ProgBotX/rutamax-landingpage/releases/download/v0.1.0-alpha/20241221---ruta_max.apk",
+        url: "https://www.dropbox.com/scl/fi/wvvogi5a75l4hwpfdznn5/20241221-ruta_max.apk?rlkey=9kcxuq6yda4p55xlr1n5roz73&st=pltr8dz6&dl=1",
         disabled: false
       }
     },  
     {
       id: 2,
-      version: "RutaMax v0.1.2",
+      version: "RutaMax v0.1.2-alpha",
       lastUpdate: "7 enero, 2025",
       status: "Estable",
       statusColor: "green", // Este valor lo usaremos para el color del badge.
@@ -32,13 +32,13 @@ const versionsData: VersionData[] = [
       ],
       download: {
         platform: "Android",
-        url: "https://github.com/ProgBotX/rutamax-landingpage/releases/download/v0.1.2-alpha/20250107---ruta_max.apk",
+        url: "https://www.dropbox.com/scl/fi/k19g08271b5468i5car1t/20250107-ruta_max.apk?rlkey=snkb2447glusug93u6m60g03h&st=onssedsj&dl=1",
         disabled: false
       }
     },
     {
       id: 3,
-      version: "RutaMax v0.1.2",
+      version: "RutaMax v0.1.2-alpha",
       lastUpdate: "7 enero, 2025",
       status: "En desarrollo",
       statusColor: "yellow",
