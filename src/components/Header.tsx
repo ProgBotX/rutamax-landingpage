@@ -7,11 +7,11 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const getNavLinkClass = (isActive: boolean) =>
       `text-white rounded-md px-3 py-2 font-medium ${
-        isActive ? "bg-sky-500" : "hover:bg-sky-500"
+        isActive ? "bg-sky-600" : "hover:bg-sky-600"
       }`;
 
     return (
-      <nav className="bg-gradient-to-r from-sky-950 to-sky-800 shadow-lg md:fixed md:top-0 md:left-0 md:w-full md:z-50">
+      <nav className="bg-sky-950 md:bg-sky-950/60 md:backdrop-filter md:backdrop-blur-md shadow-lg md:fixed md:top-0 md:left-0 md:w-full md:z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-20">
             <div className="flex items-center">

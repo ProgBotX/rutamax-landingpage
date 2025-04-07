@@ -1,6 +1,5 @@
 import React from "react";
 import HeroSection from "../components/HeroSection";
-import Downloads from "./Downloads";
 import versionsData from "./versions";
 import DownloadCard from "../components/DownloadCard";
 import { FaDownload, FaUsers, FaRegSmile, FaSyncAlt } from 'react-icons/fa';
@@ -15,21 +14,21 @@ const LandingPage: React.FC = () => {
       <section className="container mx-auto py-16 px-4">
         <h2 className="text-3xl font-bold text-center mb-8">¿Por qué usar RutaMax?</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="p-6 bg-gray-100 rounded-lg text-center">
+          <div className="p-6 bg-gray-100 rounded-lg text-center shadow-lg">
             <div className="flex justify-center mb-4">
               <FaUsers className="text-blue-500 text-4xl" /> {/* Ícono */}
             </div>
             <h3 className="text-xl font-semibold">Colaborativo</h3>
             <p className="mt-2">Los usuarios pueden compartir rutas.</p>
           </div>
-          <div className="p-6 bg-gray-100 rounded-lg text-center">
+          <div className="p-6 bg-gray-100 rounded-lg text-center shadow-lg">
             <div className="flex justify-center mb-4">
               <FaRegSmile className="text-green-500 text-4xl" /> {/* Ícono */}
             </div>
             <h3 className="text-xl font-semibold">Fácil de usar</h3>
             <p className="mt-2">Interfaz amigable para todos los usuarios.</p>
           </div>
-          <div className="p-6 bg-gray-100 rounded-lg text-center">
+          <div className="p-6 bg-gray-100 rounded-lg text-center shadow-lg">
             <div className="flex justify-center mb-4">
               <FaSyncAlt className="text-yellow-500 text-4xl" /> {/* Ícono */}
             </div>
@@ -39,8 +38,7 @@ const LandingPage: React.FC = () => {
         </div>
       </section>
 
-      <div id="downloads" className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="downloads" className="py-16 bg-white container mx-auto px-4">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-gray-900">
               Versiones Disponibles
@@ -57,7 +55,7 @@ const LandingPage: React.FC = () => {
             )) */
 
             versionsData
-            .filter((version) => version.download.platform == "Android")
+            .filter((version) => version.download.platform === "Android")
             .slice(-2) // Selecciona los últimos dos elementos
             .sort((a, b) => b.id - a.id)
             .map((version) => (
@@ -71,9 +69,7 @@ const LandingPage: React.FC = () => {
             ))
           }
           </div>
-
-        </div>
-      </div>
+      </section>
 
       {/* Llamada a la acción */}
       <section className="bg-gradient-to-r from-sky-900 to-sky-800 py-16">
@@ -92,7 +88,7 @@ const LandingPage: React.FC = () => {
                 </a>
               </div>
               <div className="ml-3 inline-flex">
-                <a href="#" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-sky-700 hover:bg-sky-600 transition duration-150">
+                <a href="/" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-sky-700 hover:bg-sky-600 transition duration-150">
                   Conocer Más
                 </a>
               </div>

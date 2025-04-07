@@ -6,7 +6,7 @@ const Layout = () => {
   return (
     <>
       <Header />
-      <main className="md:mt-16">
+      <main>
         <Outlet /> {/* Aquí se renderiza el contenido de cada página */}
       </main>
       <Footer />
