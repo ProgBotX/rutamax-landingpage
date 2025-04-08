@@ -7,7 +7,7 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const getNavLinkClass = (isActive: boolean) =>
       `text-white rounded-md px-3 py-2 font-medium ${
-        isActive ? "bg-sky-600" : "hover:bg-sky-600"
+        isActive ? "bg-sky-600" : "hover:bg-sky-600 transition duration-150"
       }`;
 
     return (

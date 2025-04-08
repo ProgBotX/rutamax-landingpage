@@ -1,0 +1,142 @@
+/**
+ * fadeInDown - Animación para elementos que aparecen deslizándose hacia abajo
+ * Efecto: El elemento comienza invisible y ligeramente arriba de su posición final,
+ * luego se hace visible mientras baja a su posición natural
+ * Uso: Títulos, párrafos y otros elementos textuales del hero
+ */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        /*Comienza invisible*/
+        transform: translateY(-20px);
+        /*Comienza 20px arriba de su posición final*/
+    }
+
+    to {
+        opacity: 1;
+        /*Termina completamente visible*/
+        transform: translateY(0);
+        /*Termina en su posición natural*/
+    }
+}
+
+/**
+ * floatUp - Animación para elementos que aparecen flotando hacia arriba
+ * Efecto: El elemento comienza invisible y debajo de su posición final,
+ * luego se hace visible mientras sube a su posición natural
+ * Uso: Imagen del teléfono o dispositivo móvil
+ */
+@keyframes floatUp {
+    from {
+        opacity: 0;
+        /*Comienza invisible*/
+        transform: translateY(40px);
+        /*Comienza 40px debajo de su posición final*/
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/**
+ * fadeIn - Animación para elementos que aparecen con efecto de zoom-out
+ * Efecto: El elemento comienza semi-transparente y ligeramente agrandado,
+ * luego se hace completamente visible mientras regresa a su tamaño normal
+ * Uso: Imágenes dentro del dispositivo móvil
+ */
+@keyframes fadeIn {
+    from {
+        opacity: 0.7;
+        /*Comienza semi-transparente*/
+        transform: scale(1.1);
+        /*Comienza un 10% más grande*/
+    }
+
+    to {
+        opacity: 1;
+        /*Termina completamente visible*/
+        transform: scale(1);
+        /*Termina en su tamaño normal*/
+    }
+}
+
+/**
+ * subtlePulse - Animación para crear un efecto de "respiración" o pulsación sutil
+ * Efecto: El elemento aumenta y disminuye de tamaño de forma cíclica
+ * Uso: Contenedor de la imagen para mantener la atención visual
+ */
+@keyframes subtlePulse {
+    0% {
+        transform: scale(1);
+        /*Tamaño normal al inicio*/
+    }
+
+    50% {
+        transform: scale(1.02);
+        /*Aumenta un 2% a la mitad de la animación*/
+    }
+
+    100% {
+        transform: scale(1);
+        /*Vuelve a tamaño normal al final*/
+    }
+}
+
+
+
+/* Clase para aplicar la animación fadeInDown */
+.animate-fade-in-down {
+    animation: fadeInDown 0.8s ease-out forwards;
+    /* Duración de 0.8s, con desaceleración al final, mantiene estado final */
+}
+
+/* Clase para aplicar la animación floatUp con retraso */
+.animate-float-up {
+    animation: floatUp 1s ease-out forwards; /* Duración de 1s, con desaceleración al final, mantiene estado final */
+    animation-delay: 0.4s;  /* Espera 0.4s antes de comenzar la animación */
+    opacity: 0;             /* Comienza invisible para evitar parpadeo */
+    transform: translateY(40px);    /* Posición inicial consistente con la animación */
+}
+
+/* Clase para aplicar la animación fadeIn */
+.animate-fade-in {
+    animation: fadeIn 1.2s ease-out forwards;  /* Duración de 1.2s, con desaceleración al final, mantiene estado final */
+}
+
+/* Clase para aplicar la animación subtlePulse */
+.animate-subtle-pulse {
+    animation: subtlePulse 4s infinite ease-in-out;  /* Duración de 4s, se repite infinitamente, suavizado al inicio y final */
+}
+
+
+
+/* Clase para retrasar animaciones 0.3 segundos */
+.animation-delay-300 {
+    animation-delay: 0.3s;  /* Espera 0.3s antes de comenzar la animación */
+    opacity: 0;             /* Comienza invisible para evitar parpadeo durante la espera */
+}
+
+/* Clase para retrasar animaciones 0.6 segundos */
+.animation-delay-600 {
+    animation-delay: 0.6s;  /* Espera 0.6s antes de comenzar la animación */
+    opacity: 0;             /* Comienza invisible para evitar parpadeo durante la espera */
+}
+
+/* Efectos interactivos para el botón de descarga */
+.download-button:hover {
+    transform: scale(1.05); /* Al pasar el cursor, aumenta un 5% su tamaño */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Aumenta la sombra para dar sensación de elevación */
+}
+
+/* Efecto al hacer clic en el botón */
+.download-button:active {
+    transform: scale(0.95);  /* Al hacer clic, se reduce un 5% su tamaño para dar sensación de pulsación */
+}
+
+/* Efecto al pasar el cursor sobre el teléfono */
+.phone-container:hover {
+    transform: translateY(-8px);  /* El teléfono se eleva 8px para dar sensación de interactividad */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);  /* Sombra más pronunciada para reforzar el efecto de elevación */
+}

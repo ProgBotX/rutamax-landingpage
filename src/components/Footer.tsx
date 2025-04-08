@@ -14,17 +14,17 @@ const Header = () => {
                 <div>
                 <h3 className="text-lg font-semibold text-white">Enlaces</h3>
                 <ul className="mt-4 space-y-2">
-                    <li><a href="#" className="text-base text-gray-300 hover:text-white">Inicio</a></li>
-                    <li><a href="#" className="text-base text-gray-300 hover:text-white">Características</a></li>
-                    <li><a href="#" className="text-base text-gray-300 hover:text-white">Descargas</a></li>
-                    <li><a href="#" className="text-base text-gray-300 hover:text-white">Contacto</a></li>
+                    <li><a href="/" className="text-base text-gray-300 hover:text-white">Inicio</a></li>
+                    <li><a href="/" className="text-base text-gray-300 hover:text-white">Características</a></li>
+                    <li><a href="/downloads" className="text-base text-gray-300 hover:text-white">Descargas</a></li>
+                    <li><a href="/" className="text-base text-gray-300 hover:text-white">Contacto</a></li>
                 </ul>
                 </div>
                 <div>
                 <h3 className="text-lg font-semibold text-white">Legal</h3>
                 <ul className="mt-4 space-y-2">
-                    <li><a href="#" className="text-base text-gray-300 hover:text-white">Política de Privacidad</a></li>
-                    <li><a href="#" className="text-base text-gray-300 hover:text-white">Términos de Uso</a></li>
+                    <li><a href="/" className="text-base text-gray-300 hover:text-white">Política de Privacidad</a></li>
+                    <li><a href="/" className="text-base text-gray-300 hover:text-white">Términos de Uso</a></li>
                 </ul>
                 </div>
             </div>

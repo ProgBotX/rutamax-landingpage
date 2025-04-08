@@ -13,10 +13,10 @@ const DownloadCard: React.FC<DownloadCardProps> = ({ data }) => {
   // Clases para el botón basado en si está deshabilitado o no.
   const downloadButtonClasses = data.download.disabled
     ? "w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gray-400 cursor-not-allowed pointer-events-none"
-    : "w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-sky-600 hover:bg-sky-700";
+    : "w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-sky-600 hover:bg-sky-700 transition duration-150";
 
   return (
-    <div className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+    <div className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-lg hover:shadow-xl transition duration-300 animate-float-up">
       <div className="p-6">
         <h3 className="text-lg font-medium text-gray-900">{data.version}</h3>
         <p className="mt-2 text-sm text-gray-500">Última actualización: {data.lastUpdate}</p>
@@ -32,7 +32,7 @@ const DownloadCard: React.FC<DownloadCardProps> = ({ data }) => {
             ))}
           </ul>
         </div>
-        <div className="mt-6">
+        <div className="mt-6 hover:scale-105 duration-150">
           <a
             href={data.download.url}
             className={downloadButtonClasses}
