@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.a126a80e.css",
-    "main.js": "/static/js/main.fdd9bda5.js",
+    "main.js": "/static/js/main.00c38a38.js",
     "static/js/453.b94e3d3e.chunk.js": "/static/js/453.b94e3d3e.chunk.js",
     "static/media/rutamax_preview.jpg": "/static/media/rutamax_preview.79596de1283e46c4951f.jpg",
     "static/media/logo.png": "/static/media/logo.25d4e978a153947058e4.png",
     "index.html": "/index.html",
     "main.a126a80e.css.map": "/static/css/main.a126a80e.css.map",
-    "main.fdd9bda5.js.map": "/static/js/main.fdd9bda5.js.map",
+    "main.00c38a38.js.map": "/static/js/main.00c38a38.js.map",
     "453.b94e3d3e.chunk.js.map": "/static/js/453.b94e3d3e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a126a80e.css",
-    "static/js/main.fdd9bda5.js"
+    "static/js/main.00c38a38.js"
   ]
 }
