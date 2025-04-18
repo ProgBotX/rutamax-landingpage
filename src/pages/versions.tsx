@@ -6,8 +6,8 @@ const versionsData: VersionData[] = [
       id: 1,
       version: "RutaMax v0.1.0-alpha",
       lastUpdate: "21 diciembre, 2024",
-      status: "Versión anterior",
-      statusColor: "blue",
+      status: "Obsoleto",
+      statusColor: "yellow",
       changes: [
         "Compatible con dispositivos más antiguos",
         "Menor consumo de memoria",
@@ -23,8 +23,8 @@ const versionsData: VersionData[] = [
       id: 2,
       version: "RutaMax v0.1.2-alpha",
       lastUpdate: "7 enero, 2025",
-      status: "Estable",
-      statusColor: "green", // Este valor lo usaremos para el color del badge.
+      status: "Obsoleto",
+      statusColor: "yellow", // Este valor lo usaremos para el color del badge.
       changes: [
         "Nuevas opciones para compartir rutas",
         "Mejoras en el rendimiento",
@@ -53,23 +53,23 @@ const versionsData: VersionData[] = [
         disabled: true
       }
     },
-    /* {
+    {
       id: 4,
-      version: "RutaMax v2.0.5",
-      lastUpdate: "1 febrero, 2025",
-      status: "Versión anterior",
-      statusColor: "blue",
+      version: "RutaMax v0.1.5-alpha",
+      lastUpdate: "17 abril, 2025",
+      status: "Estable",
+      statusColor: "green", // Este valor lo usaremos para el color del badge.
       changes: [
-        "Compatible con dispositivos más antiguos",
-        "Menor consumo de memoria",
-        "Interfaz clásica"
+        "Opción para eliminar rutas",
+        "Mejoras de seguridad y rendimiento",
+        "Visualizar rutas del usuario sin conexión"
       ],
       download: {
         platform: "Android",
-        url: "#",
+        url: "https://www.dropbox.com/scl/fi/bv4tzjwzpk7p2j8k7s9dw/20250417-ruta_max-v0.1.5-alpha.apk?rlkey=2j2wmtvbto79j3ye37nno8oo5&st=x1wz597h&dl=1",
         disabled: false
       }
-    } */
+    },
   ];
   
   export default versionsData;
