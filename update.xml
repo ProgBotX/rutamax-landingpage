@@ -7,7 +7,7 @@
             <description>Mejoras de rendimiento y corrección de errores.</description>
             <sparkle:releaseNotesLink>https://rutamax.tecnosweb.com</sparkle:releaseNotesLink>
             <enclosure 
-                url="https://www.dropbox.com/scl/fi/6cyuog6rplkhtxje4umg6/20251107-rutamax-v0.2.0-alpha.apk?rlkey=abmh9on5yu7tt9uzpquwj2l03&st=63phy000&dl=1" 
+                url="https://www.dropbox.com/scl/fi/6cyuog6rplkhtxje4umg6/20251107-rutamax-v0.2.0-alpha.apk?rlkey=abmh9on5yu7tt9uzpquwj2l03&amp;st=63phy000&amp;dl=1" 
                 sparkle:version="0.2.0" 
                 sparkle:os="android" 
                 length="0" 
