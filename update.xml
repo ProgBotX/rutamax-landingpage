@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="0.2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+<rss version="0.3.1" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
     <channel>
         <title>App Updates</title>
         <item>
-            <title>Versión 0.2.0</title>
-            <description>Mejoras de rendimiento y corrección de errores.</description>
+            <title>Versión 0.3.1</title>
+            <description>Mejoras de diseño y rendimiento.</description>
             <sparkle:releaseNotesLink>https://rutamax.tecnosweb.com</sparkle:releaseNotesLink>
             <enclosure 
                 url="https://rutamax.tecnosweb.com" 
-                sparkle:version="0.2.0" 
+                sparkle:version="0.3.1" 
                 sparkle:os="android" 
-                length="0" 
+                length="67898828" 
                 type="application/vnd.android.package-archive" />
         </item>
     </channel>
