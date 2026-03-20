@@ -87,6 +87,22 @@ const versionsData: VersionData[] = [
         disabled: false
       }
     },
+    {
+      id: 6,
+      version: "RutaMax v0.3.1-alpha",
+      lastUpdate: "20 marzo, 2026",
+      status: "Estable",
+      statusColor: "green", // Este valor lo usaremos para el color del badge.
+      changes: [
+        "Actualización completa del diseño UX/UI",
+        "Redimiento optimizado de la aplicación"
+      ],
+      download: {
+        platform: "Android",
+        url: "https://www.dropbox.com/scl/fi/93tej01ywbvon3ub2zeln/20260320-ruta_max-v0.3.1-alpha.apk?rlkey=4juasqynjjdnsblyhgesxkr50&st=bx4cvyjm&dl=1",
+        disabled: false
+      }
+    },
   ];
   
   export default versionsData;
