@@ -21,7 +21,7 @@ const Header = () => {
                 alt="Vista previa de la app" 
                 className="h-14 object-cover"
               />
-              <span>RutaMax</span>
+              <span>Riftara</span>
               </Link>
             </div>
             

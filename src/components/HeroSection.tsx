@@ -9,7 +9,7 @@ const HeroSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
         <div className="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight animate-fade-in-down">
-            Bienvenido a RutaMax
+            Bienvenido a Riftara
           </h1>
           <p className="mt-4 text-xl text-blue-100 max-w-xl animate-fade-in-down animation-delay-300">
             La mejor app para compartir rutas de transporte público actualizadas al momento. Viaja más inteligente y ayuda a tu comunidad.

@@ -4,7 +4,7 @@ import { VersionData } from "../data/interfaces/VerionData";
 const versionsData: VersionData[] = [
     {
       id: 1,
-      version: "RutaMax v0.1.0-alpha",
+      version: "Riftara v0.1.0-alpha",
       lastUpdate: "21 diciembre, 2024",
       status: "Obsoleto",
       statusColor: "yellow",
@@ -21,7 +21,7 @@ const versionsData: VersionData[] = [
     },  
     {
       id: 2,
-      version: "RutaMax v0.1.2-alpha",
+      version: "Riftara v0.1.2-alpha",
       lastUpdate: "7 enero, 2025",
       status: "Obsoleto",
       statusColor: "yellow", // Este valor lo usaremos para el color del badge.
@@ -38,7 +38,7 @@ const versionsData: VersionData[] = [
     },
     {
       id: 3,
-      version: "RutaMax v0.1.2-alpha",
+      version: "Riftara v0.1.2-alpha",
       lastUpdate: "7 enero, 2025",
       status: "En desarrollo",
       statusColor: "yellow",
@@ -55,7 +55,7 @@ const versionsData: VersionData[] = [
     },
     {
       id: 4,
-      version: "RutaMax v0.1.6-alpha",
+      version: "Riftara v0.1.6-alpha",
       lastUpdate: "18 abril, 2025",
       status: "Obsoleto",
       statusColor: "yellow", // Este valor lo usaremos para el color del badge.
@@ -72,7 +72,7 @@ const versionsData: VersionData[] = [
     },
     {
       id: 5,
-      version: "RutaMax v0.2.0-alpha",
+      version: "Riftara v0.2.0-alpha",
       lastUpdate: "07 noviembre, 2025",
       status: "Estable",
       statusColor: "green", // Este valor lo usaremos para el color del badge.
@@ -89,7 +89,7 @@ const versionsData: VersionData[] = [
     },
     {
       id: 6,
-      version: "RutaMax v0.3.1-alpha",
+      version: "Riftara v0.3.1-alpha",
       lastUpdate: "20 marzo, 2026",
       status: "Estable",
       statusColor: "green", // Este valor lo usaremos para el color del badge.

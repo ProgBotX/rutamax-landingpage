@@ -6,7 +6,7 @@ const Header = () => {
             <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
-                <h3 className="text-lg font-semibold text-white">RutaMax</h3>
+                <h3 className="text-lg font-semibold text-white">Riftara</h3>
                 <p className="mt-2 text-base text-gray-300">
                     La comunidad más grande de transporte público compartido.
                 </p>
@@ -30,7 +30,7 @@ const Header = () => {
             </div>
             <div className="mt-12 border-t border-gray-700 pt-8">
                 <p className="text-base text-gray-400 text-center">
-                &copy; 2025 RutaMax. Todos los derechos reservados.
+                &copy; 2025 Riftara. Todos los derechos reservados.
                 </p>
             </div>
             </div>
