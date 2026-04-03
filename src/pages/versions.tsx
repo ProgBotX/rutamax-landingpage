@@ -67,14 +67,14 @@ const versionsData: VersionData[] = [
       download: {
         platform: "Android",
         url: "https://www.dropbox.com/scl/fi/q899h5dw074v4jzl94o1t/20250418-ruta_max_v0.1.6-alpha.apk?rlkey=g0iicalp2icu81q485tfddh3n&st=fe4cub63&dl=1",
-        disabled: false
+        disabled: true
       }
     },
     {
       id: 5,
       version: "Riftara v0.2.0-alpha",
       lastUpdate: "07 noviembre, 2025",
-      status: "Estable",
+      status: "Obsoleto",
       statusColor: "green", // Este valor lo usaremos para el color del badge.
       changes: [
         "Descarga de mapas para uso sin conexión",
@@ -100,6 +100,24 @@ const versionsData: VersionData[] = [
       download: {
         platform: "Android",
         url: "https://www.dropbox.com/scl/fi/93tej01ywbvon3ub2zeln/20260320-ruta_max-v0.3.1-alpha.apk?rlkey=4juasqynjjdnsblyhgesxkr50&st=bx4cvyjm&dl=1",
+        disabled: false
+      }
+    },
+    {
+      id: 7,
+      version: "Riftara v0.3.2-alpha",
+      lastUpdate: "03 abril, 2026",
+      status: "Estable",
+      statusColor: "green", // Este valor lo usaremos para el color del badge.
+      changes: [
+        "Actualización del diseño UX/UI",
+        "Redimiento optimizado de la aplicación",
+        "Actualización del motor cartográfico",
+        "Integra sección de contacto, preajustes sugeridos y gestión de errores"
+      ],
+      download: {
+        platform: "Android",
+        url: "https://www.dropbox.com/scl/fi/fdpa6163rdgtuzatc6qqp/20260403-riftara-v0.3.2-alpha.apk?rlkey=qb638p9dpeif67r3llakuvjxy&st=vb2s10dg&dl=1",
         disabled: false
       }
     },

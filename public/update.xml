@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="0.3.1" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+<rss version="0.3.2" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
     <channel>
         <title>Riftara Updates</title>
         <item>
-            <title>Versión 0.3.1</title>
+            <title>Versión 0.3.2</title>
             <description>Mejoras de diseño y rendimiento.</description>
             <sparkle:releaseNotesLink>https://riftara.tecnosweb.com</sparkle:releaseNotesLink>
             <enclosure 
                 url="https://riftara.tecnosweb.com" 
-                sparkle:version="0.3.1" 
+                sparkle:version="0.3.2" 
                 sparkle:os="android" 
                 length="67898828" 
                 type="application/vnd.android.package-archive" />
