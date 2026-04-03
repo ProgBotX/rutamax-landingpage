@@ -75,7 +75,7 @@ const versionsData: VersionData[] = [
       version: "Riftara v0.2.0-alpha",
       lastUpdate: "07 noviembre, 2025",
       status: "Obsoleto",
-      statusColor: "green", // Este valor lo usaremos para el color del badge.
+      statusColor: "yellow", // Este valor lo usaremos para el color del badge.
       changes: [
         "Descarga de mapas para uso sin conexión",
         "Redimiento optimizado de la aplicación",
@@ -84,15 +84,15 @@ const versionsData: VersionData[] = [
       download: {
         platform: "Android",
         url: "https://www.dropbox.com/scl/fi/6cyuog6rplkhtxje4umg6/20251107-rutamax-v0.2.0-alpha.apk?rlkey=abmh9on5yu7tt9uzpquwj2l03&st=63phy000&dl=1",
-        disabled: false
+        disabled: true
       }
     },
     {
       id: 6,
       version: "Riftara v0.3.1-alpha",
       lastUpdate: "20 marzo, 2026",
-      status: "Estable",
-      statusColor: "green", // Este valor lo usaremos para el color del badge.
+      status: "Obsoleto",
+      statusColor: "yellow", // Este valor lo usaremos para el color del badge.
       changes: [
         "Actualización completa del diseño UX/UI",
         "Redimiento optimizado de la aplicación"
