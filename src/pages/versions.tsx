@@ -121,6 +121,23 @@ const versionsData: VersionData[] = [
         disabled: false
       }
     },
+    {
+      id: 8,
+      version: "Riftara v0.4.0-alpha",
+      lastUpdate: "03 mayo, 2026",
+      status: "Estable",
+      statusColor: "green", // Este valor lo usaremos para el color del badge.
+      changes: [
+        "Agrega búsqueda por dirección",
+        "Redimiento optimizado de la aplicación",
+        "Agrega estimación de distancias y transbordos",
+      ],
+      download: {
+        platform: "Android",
+        url: "https://www.dropbox.com/scl/fi/zbtl28lhj10dbps393yir/20260503-riftara-v0.4.0-alpha.apk?rlkey=8lth8396w7awfbig33ome2vcn&st=kq6jmcxg&dl=1",
+        disabled: false
+      }
+    },
   ];
   
   export default versionsData;
