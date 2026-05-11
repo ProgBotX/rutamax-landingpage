@@ -1,48 +1,82 @@
 import React from 'react';
 import { DownloadCardProps } from '../data/interfaces/VerionData';
-import { FaDownload } from "react-icons/fa";
+import { FaAndroid, FaApple } from "react-icons/fa";
+
+const statusConfig = {
+  green: {
+    label: 'bg-transit-cyan/10 text-transit-cyan border-transit-cyan/20',
+    dot: 'bg-transit-cyan',
+    line: 'border-transit-cyan/20',
+  },
+  blue: {
+    label: 'bg-blue-500/10 text-blue-400 border-blue-500/20',
+    dot: 'bg-blue-400',
+    line: 'border-blue-500/20',
+  },
+  yellow: {
+    label: 'bg-transit-amber/10 text-transit-amber border-transit-amber/20',
+    dot: 'bg-transit-amber',
+    line: 'border-transit-amber/20',
+  },
+};
 
 const DownloadCard: React.FC<DownloadCardProps> = ({ data }) => {
-  // Definimos clases dinámicas para el badge en base al color de estado.
-  const statusBadgeColor = {
-    green: "bg-green-100 text-green-800",
-    blue: "bg-blue-100 text-blue-800",
-    yellow: "bg-yellow-100 text-yellow-800"
-  };
-
-  // Clases para el botón basado en si está deshabilitado o no.
-  const downloadButtonClasses = data.download.disabled
-    ? "w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gray-400 cursor-not-allowed pointer-events-none"
-    : "w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-sky-600 hover:bg-sky-700 transition duration-150";
+  const colors = statusConfig[data.statusColor] || statusConfig.yellow;
+  const isDisabled = data.download.disabled;
+  const isIOS = data.download.platform === "iOS";
 
   return (
-    <div className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-lg hover:shadow-xl transition duration-300 animate-float-up">
-      <div className="p-6">
-        <h3 className="text-lg font-medium text-gray-900">{data.version}</h3>
-        <p className="mt-2 text-sm text-gray-500">Última actualización: {data.lastUpdate}</p>
-        <div className="mt-4 flex flex-col space-y-2">
-          <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${statusBadgeColor[data.statusColor]}`}>
+    <div className="group relative glass-card hover:border-transit-cyan/30 transition-all duration-500 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-transit-cyan/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+      <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-transit-cyan/40 via-transit-amber/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+      <div className="relative p-6">
+        <div className="flex items-start justify-between mb-4">
+          <div>
+            <h3 className="font-display text-xl tracking-wide text-white group-hover:text-transit-cyan transition-colors duration-300">
+              {data.version}
+            </h3>
+            <p className="text-xs text-slate-500 mt-1 font-body">
+              {data.lastUpdate}
+            </p>
+          </div>
+          <div className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium border ${colors.label}`}>
+            <span className={`w-1.5 h-1.5 rounded-full ${colors.dot}`} />
             {data.status}
-          </span>
+          </div>
         </div>
-        <div className="mt-4 text-sm text-gray-500">
-          <ul className="list-disc pl-5 space-y-1">
+
+        <div className="mb-5">
+          <ul className="space-y-2">
             {data.changes.map((item: string, index: number) => (
-              <li key={index}>{item}</li>
+              <li key={index} className="text-sm text-slate-400 flex items-start gap-2">
+                <span className="mt-1.5 w-1 h-1 rounded-full bg-transit-cyan/40 flex-shrink-0" />
+                {item}
+              </li>
             ))}
           </ul>
         </div>
-        <div className="mt-6 hover:scale-105 duration-150">
+
+        {isDisabled ? (
+          <span
+            className="w-full flex items-center justify-center gap-3 px-5 py-3 rounded-xl text-sm font-body font-semibold tracking-wide bg-transit-800/50 text-slate-600 border border-transit-700/20"
+          >
+            {isIOS ? <FaApple className="text-lg" /> : <FaAndroid className="text-lg" />}
+            <span>PRÓXIMAMENTE</span>
+          </span>
+        ) : (
           <a
             href={data.download.url}
-            className={downloadButtonClasses}
+            className="w-full flex items-center justify-center gap-3 px-5 py-3 rounded-xl text-sm font-body font-semibold tracking-wide transition-all duration-300 bg-transit-cyan text-transit-950 hover:bg-cyan-300 shadow-lg shadow-transit-cyan/20 hover:shadow-transit-cyan/30 hover:-translate-y-0.5"
           >
-            <FaDownload className="mr-2" /> Descargar para {data.download.platform}
+            {isIOS ? <FaApple className="text-lg" /> : <FaAndroid className="text-lg" />}
+            <span>DESCARGAR APK</span>
           </a>
-        </div>
+        )}
       </div>
     </div>
   );
-}
+};
 
 export default DownloadCard;

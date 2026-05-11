@@ -1,65 +1,69 @@
 import { Link, NavLink } from "react-router-dom";
 import React, { useState } from 'react';
-import Logo from "../assets/logo.png"
+import Logo from "../assets/logo.png";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const getNavLinkClass = (isActive: boolean) =>
-      `text-white rounded-md px-3 py-2 font-medium ${
-        isActive ? "bg-sky-600" : "hover:bg-sky-600 transition duration-150"
-      }`;
+  const linkClass = ({ isActive }: { isActive: boolean }) =>
+    `relative px-4 py-2 text-sm font-body font-medium tracking-wide transition-colors duration-200 ${
+      isActive
+        ? "text-transit-cyan"
+        : "text-slate-300 hover:text-transit-cyan"
+    }`;
 
-    return (
-      <nav className="bg-sky-950 md:bg-sky-950/60 md:backdrop-filter md:backdrop-blur-md shadow-lg md:fixed md:top-0 md:left-0 md:w-full md:z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-20">
-            <div className="flex items-center">
-              <Link to="/" className="flex items-center text-white font-bold text-xl space-x-3">
-              <img 
+  const mobileLinkClass = ({ isActive }: { isActive: boolean }) =>
+    `block px-4 py-3 rounded-lg text-sm font-body font-medium transition-all duration-200 ${
+      isActive
+        ? "text-transit-cyan bg-transit-cyan/10"
+        : "text-slate-300 hover:text-transit-cyan hover:bg-transit-800/50"
+    }`;
+
+  return (
+    <nav className="fixed top-0 left-0 w-full z-50 bg-transit-950/70 backdrop-blur-xl border-b border-transit-800/50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          <Link to="/" className="flex items-center gap-3 group">
+            <div className="relative">
+              <img
                 src={Logo}
-                alt="Vista previa de la app" 
-                className="h-14 object-cover"
+                alt="Riftara"
+                className="h-12 w-12 object-contain transition-transform duration-300 group-hover:scale-105"
               />
-              <span>Riftara</span>
-              </Link>
+              <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-8 h-0.5 bg-transit-cyan/60 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
-            
-            {/* Desktop menu */}
-            <div className="hidden md:flex items-center space-x-8">
-              <NavLink to="/" className={({ isActive }) => getNavLinkClass(isActive)}>Inicio</NavLink>
-              {/* <a href="#" className="text-white hover:text-blue-200 px-3 py-2 font-medium">Características</a> */}
-              <NavLink to="downloads" className={({ isActive }) => getNavLinkClass(isActive)}>Descargas</NavLink>
-              {/* <a href="#" className="text-white hover:text-blue-200 px-3 py-2 font-medium">Contacto</a> */}
-            </div>
-            
-            {/* Mobile menu button */}
-            <div className="md:hidden flex items-center">
-              <button 
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-white hover:text-blue-200 focus:outline-none"
-              >
-                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              </button>
-            </div>
+            <span className="font-display text-2xl tracking-wide text-white group-hover:text-transit-cyan transition-colors duration-300">
+              RIFTARA
+            </span>
+          </Link>
+
+          <div className="hidden md:flex items-center gap-1">
+            <NavLink to="/" className={linkClass}>INICIO</NavLink>
+            <NavLink to="downloads" className={linkClass}>DESCARGAS</NavLink>
           </div>
+
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden relative w-10 h-10 flex items-center justify-center text-slate-300 hover:text-transit-cyan transition-colors"
+            aria-label="Menu"
+          >
+            <div className="w-5 flex flex-col gap-1.5">
+              <span className={`block h-0.5 bg-current rounded-full transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-1' : ''}`} />
+              <span className={`block h-0.5 bg-current rounded-full transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''}`} />
+              <span className={`block h-0.5 bg-current rounded-full transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-1' : ''}`} />
+            </div>
+          </button>
         </div>
-        
-        {/* Mobile menu */}
-        {isMenuOpen && (
-          <div className="md:hidden bg-sky-900 pb-3 px-2">
-            <Link to="/" className="block text-white hover:bg-sky-500 px-3 py-2 rounded-md text-base font-medium">Inicio</Link>
-            {/* <a href="#" className="block text-white hover:bg-blue-700 px-3 py-2 rounded-md text-base font-medium">Características</a> */}
-            <Link to="downloads" className="block text-white hover:bg-sky-500 px-3 py-2 rounded-md text-base font-medium">Descargas</Link>
-            {/* <a href="#" className="block text-white hover:bg-blue-700 px-3 py-2 rounded-md text-base font-medium">Contacto</a> */}
-            {/* <a href="#" className="block bg-white text-blue-600 hover:bg-blue-50 mt-2 px-3 py-2 rounded-md text-base font-medium">Descargar App</a> */}
-          </div>
-        )}
-      </nav>
-    );
-  };
-  
-  export default Header;
-  
+      </div>
+
+      <div className={`md:hidden transition-all duration-300 overflow-hidden ${isMenuOpen ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'}`}>
+        <div className="px-4 pb-4 space-y-1 bg-transit-900/90 backdrop-blur-xl border-t border-transit-800/30">
+          <NavLink to="/" className={mobileLinkClass} onClick={() => setIsMenuOpen(false)}>INICIO</NavLink>
+          <NavLink to="downloads" className={mobileLinkClass} onClick={() => setIsMenuOpen(false)}>DESCARGAS</NavLink>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Header;
