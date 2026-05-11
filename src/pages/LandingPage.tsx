@@ -39,7 +39,7 @@ const FeatureCard = ({ icon, title, desc, accent, delay }: { icon: React.ReactNo
         {title}
       </h3>
 
-      <p className="text-sm text-slate-400 leading-relaxed">
+                <p className="text-sm text-slate-300 leading-relaxed">
         {desc}
       </p>
 
@@ -66,7 +66,7 @@ const LandingPage: React.FC = () => {
             <h2 className="font-display text-5xl md:text-6xl text-white mb-4 animate-fade-in-up animation-delay-200">
               ¿POR QUÉ <span className="gradient-text">RIFTARA</span>?
             </h2>
-            <p className="text-slate-400 max-w-xl mx-auto text-base animate-fade-in-up animation-delay-400">
+            <p className="text-slate-200 max-w-xl mx-auto text-base animate-fade-in-up animation-delay-400">
               Una plataforma construida por y para la comunidad de transporte público.
             </p>
           </div>
@@ -97,7 +97,7 @@ const LandingPage: React.FC = () => {
         </div>
       </section>
 
-      <section id="downloads" className="relative py-24 bg-transit-950 overflow-hidden">
+      <section id="downloads" className="relative py-24 bg-transit-900 overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-10" />
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-transit-amber/20 to-transparent" />
 
@@ -110,7 +110,7 @@ const LandingPage: React.FC = () => {
             <h2 className="font-display text-5xl md:text-6xl text-white mb-4 animate-fade-in-up animation-delay-200">
               VERSIONES <span className="gradient-text">DISPONIBLES</span>
             </h2>
-            <p className="text-slate-400 max-w-xl mx-auto text-base animate-fade-in-up animation-delay-400">
+            <p className="text-slate-300 max-w-xl mx-auto text-base animate-fade-in-up animation-delay-400">
               Descarga la versión que mejor se adapte a tu dispositivo.
             </p>
           </div>
@@ -147,7 +147,7 @@ const LandingPage: React.FC = () => {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-20">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-transit-cyan/10 border border-transit-cyan/20 text-transit-cyan text-xs font-body font-medium tracking-wide mb-6 animate-fade-in-up">
               <span className="w-1.5 h-1.5 rounded-full bg-transit-cyan animate-pulse" />
               Comunidad
@@ -155,62 +155,80 @@ const LandingPage: React.FC = () => {
             <h2 className="font-display text-5xl md:text-6xl text-white mb-4 animate-fade-in-up animation-delay-200">
               LA RED <span className="gradient-text">CRECE CONTIGO</span>
             </h2>
-            <p className="text-slate-400 max-w-2xl mx-auto text-base md:text-lg leading-relaxed animate-fade-in-up animation-delay-400">
+            <p className="text-slate-200 max-w-2xl mx-auto text-base md:text-lg leading-relaxed animate-fade-in-up animation-delay-400">
               Cada ruta que compartes fortalece la red. Entre más contribuyamos, 
               mejores serán las rutas para todos. Tú aportas, todos ganan.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto mb-16">
-            <div className="glass-card p-6 text-center animate-fade-in-up animation-delay-200">
-              <div className="w-12 h-12 rounded-full bg-transit-cyan/10 border border-transit-cyan/20 flex items-center justify-center text-transit-cyan text-xl mx-auto mb-4">
-                <FaCloudDownloadAlt />
-              </div>
-              <h3 className="font-display text-lg tracking-wide text-white mb-2">COMPARTE RUTAS</h3>
-              <p className="text-xs text-slate-400 leading-relaxed">
-                Aporta las rutas que conoces y ayuda a otros a llegar a su destino. Cada contribución cuenta.
-              </p>
-            </div>
+          <div className="relative max-w-5xl mx-auto mb-20">
+            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-transit-cyan/30 to-transparent -translate-y-1/2" />
 
-            <div className="glass-card p-6 text-center animate-fade-in-up animation-delay-400">
-              <div className="w-12 h-12 rounded-full bg-transit-amber/10 border border-transit-amber/20 flex items-center justify-center text-transit-amber text-xl mx-auto mb-4">
-                <FaStar />
-              </div>
-              <h3 className="font-display text-lg tracking-wide text-white mb-2">ACUMULA PUNTOS</h3>
-              <p className="text-xs text-slate-400 leading-relaxed">
-                Gana puntos por cada ruta que aportes. Próximamente podrás canjearlos por funcionalidades premium.
-              </p>
-            </div>
-
-            <div className="glass-card p-6 text-center animate-fade-in-up animation-delay-600">
-              <div className="w-12 h-12 rounded-full bg-transit-magenta/10 border border-transit-magenta/20 flex items-center justify-center text-transit-magenta text-xl mx-auto mb-4">
-                <FaArrowRight />
-              </div>
-              <h3 className="font-display text-lg tracking-wide text-white mb-2">TODOS GANAN</h3>
-              <p className="text-xs text-slate-400 leading-relaxed">
-                Entre más rutas compartamos, más precisas y actualizadas serán. La red mejora para todos.
-              </p>
-            </div>
-          </div>
-
-          <div className="max-w-3xl mx-auto glass-card p-8 animate-fade-in-up">
-            <div className="flex flex-col md:flex-row items-start gap-6">
-              <div className="flex-shrink-0">
-                <div className="w-16 h-16 rounded-xl bg-transit-amber/10 border border-transit-amber/20 flex items-center justify-center text-transit-amber text-2xl">
-                  <FaMapMarkerAlt />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12">
+              <div className="relative bg-transit-900/80 backdrop-blur-sm border border-transit-700/40 rounded-xl p-8 text-center animate-fade-in-up animation-delay-200">
+                <div className="hidden md:block absolute -right-7 top-1/2 -translate-y-1/2 z-10 text-transit-cyan/60 text-2xl">
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                 </div>
+                <div className="w-14 h-14 rounded-full bg-transit-cyan/10 border border-transit-cyan/20 flex items-center justify-center text-transit-cyan text-2xl mx-auto mb-5">
+                  <FaCloudDownloadAlt />
+                </div>
+                <h3 className="font-display text-xl tracking-wide text-white mb-3">COMPARTES</h3>
+                <p className="text-sm text-slate-300 leading-relaxed">
+                  Aportas las rutas que conoces. Cada contribución fortalece la red para todos.
+                </p>
               </div>
-              <div className="flex-1">
-                <h3 className="font-display text-xl tracking-wide text-transit-amber mb-2">PRÓXIMAMENTE</h3>
-                <p className="text-sm text-slate-400 leading-relaxed">
-                  Estamos trabajando en una visualización detallada de <strong className="text-slate-300">paradas</strong> para que puedas ver cada punto de las rutas con mayor precisión. También se vienen <strong className="text-slate-300">funcionalidades premium</strong> que podrás desbloquear con los puntos que acumules contribuyendo a la comunidad.
+
+              <div className="relative bg-transit-900/80 backdrop-blur-sm border border-transit-700/40 rounded-xl p-8 text-center animate-fade-in-up animation-delay-400">
+                <div className="hidden md:block absolute -right-7 top-1/2 -translate-y-1/2 z-10 text-transit-amber/60 text-2xl">
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                </div>
+                <div className="w-14 h-14 rounded-full bg-transit-amber/10 border border-transit-amber/20 flex items-center justify-center text-transit-amber text-2xl mx-auto mb-5">
+                  <FaStar />
+                </div>
+                <h3 className="font-display text-xl tracking-wide text-white mb-3">ACUMULAS</h3>
+                <p className="text-sm text-slate-300 leading-relaxed">
+                  Ganas puntos por cada ruta. Próximamente canjeables por funcionalidades premium.
+                </p>
+              </div>
+
+              <div className="relative bg-transit-900/80 backdrop-blur-sm border border-transit-700/40 rounded-xl p-8 text-center animate-fade-in-up animation-delay-600">
+                <div className="w-14 h-14 rounded-full bg-transit-magenta/10 border border-transit-magenta/20 flex items-center justify-center text-transit-magenta text-2xl mx-auto mb-5">
+                  <FaArrowRight />
+                </div>
+                <h3 className="font-display text-xl tracking-wide text-white mb-3">TE BENEFICIAS</h3>
+                <p className="text-sm text-slate-300 leading-relaxed">
+                  Entre más rutas compartamos, más precisas y actualizadas serán. La red mejora para todos.
                 </p>
               </div>
             </div>
           </div>
 
+          <div className="max-w-3xl mx-auto bg-transit-900/80 backdrop-blur-sm border border-transit-700/40 rounded-xl p-8 md:p-10 animate-fade-in-up">
+            <h3 className="font-display text-xl tracking-wide text-transit-amber mb-6 text-center">PRÓXIMAMENTE</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="flex items-start gap-4 bg-transit-800/40 rounded-lg p-4">
+                <div className="w-10 h-10 rounded-lg bg-transit-amber/10 border border-transit-amber/20 flex items-center justify-center text-transit-amber shrink-0">
+                  <FaMapMarkerAlt className="text-sm" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-white mb-1">Paradas detalladas</p>
+                  <p className="text-xs text-slate-400 leading-relaxed">Visualización de cada punto de las rutas con mayor precisión.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4 bg-transit-800/40 rounded-lg p-4">
+                <div className="w-10 h-10 rounded-lg bg-transit-magenta/10 border border-transit-magenta/20 flex items-center justify-center text-transit-magenta shrink-0">
+                  <FaStar className="text-sm" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-white mb-1">Funciones premium</p>
+                  <p className="text-xs text-slate-400 leading-relaxed">Canjea tus puntos por funcionalidades exclusivas para la comunidad.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center mt-16 animate-fade-in-up">
-            <p className="text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
+            <p className="text-sm text-slate-400 max-w-xl mx-auto leading-relaxed">
               Cuantos más seamos, mejor funcionará la red. 
               Cada ruta nueva es un paso hacia un transporte público 
               más conectado para todos.

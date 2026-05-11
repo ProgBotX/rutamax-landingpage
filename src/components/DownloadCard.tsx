@@ -20,13 +20,13 @@ const statusConfig = {
   },
 };
 
-const DownloadCard: React.FC<DownloadCardProps> = ({ data }) => {
+const DownloadCard: React.FC<DownloadCardProps & { darker?: boolean }> = ({ data, darker }) => {
   const colors = statusConfig[data.statusColor] || statusConfig.yellow;
   const isDisabled = data.download.disabled;
   const isIOS = data.download.platform === "iOS";
 
   return (
-    <div className="group relative glass-card hover:border-transit-cyan/30 transition-all duration-500 overflow-hidden">
+    <div className={`group relative backdrop-blur-sm border border-transit-700/40 rounded-xl hover:border-transit-cyan/30 transition-all duration-500 overflow-hidden ${darker ? 'bg-transit-900/75' : 'bg-transit-800/60'}`}>
       <div className="absolute inset-0 bg-gradient-to-br from-transit-cyan/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
       <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-transit-cyan/40 via-transit-amber/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -37,7 +37,7 @@ const DownloadCard: React.FC<DownloadCardProps> = ({ data }) => {
             <h3 className="font-display text-xl tracking-wide text-white group-hover:text-transit-cyan transition-colors duration-300">
               {data.version}
             </h3>
-            <p className="text-xs text-slate-500 mt-1 font-body">
+            <p className="text-xs text-slate-400 mt-1 font-body">
               {data.lastUpdate}
             </p>
           </div>
@@ -50,7 +50,7 @@ const DownloadCard: React.FC<DownloadCardProps> = ({ data }) => {
         <div className="mb-5">
           <ul className="space-y-2">
             {data.changes.map((item: string, index: number) => (
-              <li key={index} className="text-sm text-slate-400 flex items-start gap-2">
+              <li key={index} className="text-sm text-slate-300 flex items-start gap-2">
                 <span className="mt-1.5 w-1 h-1 rounded-full bg-transit-cyan/40 flex-shrink-0" />
                 {item}
               </li>
@@ -60,7 +60,7 @@ const DownloadCard: React.FC<DownloadCardProps> = ({ data }) => {
 
         {isDisabled ? (
           <span
-            className="w-full flex items-center justify-center gap-3 px-5 py-3 rounded-xl text-sm font-body font-semibold tracking-wide bg-transit-800/50 text-slate-600 border border-transit-700/20"
+            className="w-full flex items-center justify-center gap-3 px-5 py-3 rounded-xl text-sm font-body font-semibold tracking-wide bg-transit-800/50 text-slate-400 border border-transit-700/20"
           >
             {isIOS ? <FaApple className="text-lg" /> : <FaAndroid className="text-lg" />}
             <span>PRÓXIMAMENTE</span>

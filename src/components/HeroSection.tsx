@@ -46,9 +46,9 @@ const RouteLineSVG = () => (
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center bg-transit-950 overflow-hidden pt-20">
+    <section className="relative min-h-screen flex flex-col justify-center bg-transit-900 overflow-hidden pt-20">
       <div className="absolute inset-0 bg-grid opacity-40" />
-      <div className="absolute inset-0 bg-gradient-to-b from-transit-cyan/5 via-transparent to-transit-950/80" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transit-cyan/5 via-transparent to-transit-900/80" />
 
       <div className="absolute top-40 left-10 w-72 h-72 bg-transit-cyan/5 rounded-full blur-[100px]" />
       <div className="absolute bottom-40 right-10 w-96 h-96 bg-transit-magenta/5 rounded-full blur-[120px]" />
@@ -62,14 +62,14 @@ const HeroSection: React.FC = () => {
             </div>
 
             <h1 className="font-display text-6xl md:text-7xl lg:text-8xl leading-none text-white mb-6 animate-fade-in-up animation-delay-200">
-              <span className="gradient-text">RIFTARA</span>
+              <span className="gradient-text">RIFTARA </span>
               <br />
               <span className="text-4xl md:text-5xl lg:text-6xl text-slate-300 font-body font-light">
                 Tu red de rutas
               </span>
             </h1>
 
-            <p className="text-base md:text-lg text-slate-400 max-w-xl leading-relaxed mb-10 animate-fade-in-up animation-delay-400">
+            <p className="text-base md:text-lg text-slate-300 max-w-xl leading-relaxed mb-10 animate-fade-in-up animation-delay-400">
               La comunidad más grande de transporte público compartido. 
               Descubre rutas actualizadas, comparte tus trayectos y viaja 
               más inteligente mientras ayudas a tu comunidad.
@@ -103,7 +103,6 @@ const HeroSection: React.FC = () => {
                     className="w-full h-full object-cover animate-fade-in-scale animation-delay-800"
                   />
                 </div>
-                <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full border-2 border-transit-700/50 bg-transit-900" />
               </div>
             </div>
           </div>
